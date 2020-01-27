@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+    juiceboard-db:
+        build:
+            context: ../postgresql/
+            dockerfile: ./Dockerfile
+        image: juiceboard-db:latest
+        
+    juiceboard:
+        build:
+            context: ../src/juiceboard/
+            dockerfile: ./Dockerfile
+        image: juiceboard:latest
+        ports:
+            - 5000:5000
+        depends_on:
+            - juiceboard-db

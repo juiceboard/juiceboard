@@ -1,0 +1,11 @@
+dash==1.8.0
+Flask
+Flask-SQLAlchemy
+plotly
+SQLAlchemy
+psycopg2-binary
+shap
+matplotlib
+pandas
+ipython
+gunicorn
